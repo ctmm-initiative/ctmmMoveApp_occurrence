@@ -10,17 +10,18 @@ This function calculates an occurrence distribution from telemetry data and a co
 ## Documentation
 After fitting a continuous-time movement model, this app allows to reconstruct the path where the animal possibly went.
 
-For details and background of the method please see the [publication](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/15-1607.1) and the methods description in the [documentation of the occurance function](https://ctmm-initiative.github.io/ctmm/reference/occurrence.html) of the ctmm package .
+For details and background of the method please see the [publication](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/15-1607.1) and the methods description in the [documentation of the occurance function](https://ctmm-initiative.github.io/ctmm/reference/occurrence.html) of the ctmm package. The occurrence distribution attempts to calculate the track of the animal, while the range distribution (i.e., the result of the aKDE app) calculates the long-term space use.
 
 ### Input data
-`ctmm UD with Data and Model`
+The app requires a `ctmm model with data` as input. 
+
 
 ### Output data
-`ctmm UD with Data and Model` including the occurance track?
+`ctmm UD with Data and Model` including the occurrance distribution.
 
 ### Artefacts
 
-`occurrence.gpkg`: A geopackage with the calculated occurrence distributions as raster
+`occurrence.gpkg`: A geopackage with the calculated occurrence distributions at the selected isopleths. 
 
 `occurrence_uds.zip`: A zipped archive of individual occurrence distributions (saved as tifs). 
 
@@ -35,7 +36,7 @@ For details and background of the method please see the [publication](https://es
 `Store settings`: click to store the current settings of the app for future workflow runs
 
 ### Most common errors
-Calculating of occurrence distribution can potentially take a long time if a lot of data is available for an animal. 
+Calculating of occurrence distribution can potentially take a long time if a lot of data points are available for an animal. 
 
 ### Null or error handling
 Please file an issue [here](https://github.com/ctmm-initiative/ctmmMoveApp_occurrence/issues) if you repeatedly encounter a specific error.

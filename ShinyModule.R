@@ -28,7 +28,7 @@ shinyModuleUserInterface <- function(id, label) {
       ) 
     ),
     hr(),
-    shinycssloaders::withSpinner(leafletOutput(ns("map")))
+    shinycssloaders::withSpinner(leafletOutput(ns("map"), height = "800"))
   )
 }
 
